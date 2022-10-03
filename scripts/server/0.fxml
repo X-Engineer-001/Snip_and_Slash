@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+
+<Pane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1500.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.Main">
+   <children>
+      <Pane fx:id="field" layoutX="250.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0">
+         <children>
+            <Rectangle height="1000.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1000.0">
+               <fill>
+                  <LinearGradient cycleMethod="REFLECT" endX="0.1" endY="0.5" startY="0.5">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="BLACK" offset="0.05" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle height="1000.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1000.0">
+               <fill>
+                  <LinearGradient cycleMethod="REFLECT" endX="0.5" endY="0.1" startX="0.5">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="BLACK" offset="0.05" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Circle fx:id="playerT" layoutX="250.0" layoutY="250.0" onMouseClicked="#onEnd" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="3.0" visible="false">
+               <fill>
+                  <RadialGradient centerX="1.0" centerY="0.5" radius="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="0.15" />
+                        <Stop color="TRANSPARENT" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Circle>
+            <Rectangle fx:id="fireSnip" arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="10.0" layoutY="52.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="1000.0" x="40.0" y="-5.0">
+               <fill>
+                  <LinearGradient endX="0.5" endY="1.0" startX="0.5">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="WHITE" offset="0.5" />
+                        <Stop color="TRANSPARENT" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Arc fx:id="stabT" layoutX="200.0" layoutY="269.0" length="180.0" radiusX="100.0" radiusY="20.0" startAngle="-90.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" visible="false">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.5" startY="0.5">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Arc>
+            <Arc fx:id="slashWindup" layoutX="212.0" layoutY="473.0" length="240.0" radiusX="150.0" radiusY="100.0" startAngle="-120.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" visible="false">
+               <fill>
+                  <RadialGradient centerX="0.3" centerY="0.5" radius="1.0">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="#787878" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Arc>
+            <Arc fx:id="slashNormal" layoutX="190.0" layoutY="259.0" length="240.0" radiusX="150.0" radiusY="100.0" startAngle="-120.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" visible="false">
+               <fill>
+                  <RadialGradient centerX="0.3" centerY="0.5" radius="1.0">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Arc>
+            <Arc fx:id="slashCritical" layoutX="323.0" layoutY="513.0" length="180.0" radiusX="200.0" radiusY="30.0" startAngle="-90.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" visible="false">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.5" startY="0.5">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Arc>
+            <Arc fx:id="slashBig" layoutX="260.0" layoutY="260.0" length="180.0" radiusX="350.0" radiusY="100.0" startAngle="-90.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" visible="false">
+               <fill>
+                  <RadialGradient centerY="0.5" radius="1.0">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="TRANSPARENT" offset="0.4" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Arc>
+            <Arc fx:id="slashAim" layoutX="423.0" layoutY="473.0" length="180.0" radiusX="350.0" radiusY="100.0" startAngle="-90.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" visible="false">
+               <fill>
+                  <RadialGradient centerY="0.5" radius="1.0">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="TRANSPARENT" offset="0.4" />
+                        <Stop color="#787878" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Arc>
+            <Rectangle fx:id="fireAim" arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="260.0" layoutY="323.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="1000.0" x="30.0" y="-5.0">
+               <fill>
+                  <LinearGradient endX="0.5" endY="1.0" startX="0.5">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="#787878" offset="0.5" />
+                        <Stop color="TRANSPARENT" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Ellipse fx:id="bladeT" centerX="90.0" layoutX="250.0" layoutY="250.0" radiusX="60.0" radiusY="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.6">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="TRANSPARENT" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Ellipse>
+            <Rectangle fx:id="gunT" height="10.0" layoutX="250.0" layoutY="250.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="15.0" x="5.0" y="-5.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.5" startY="0.5">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+         </children>
+      </Pane>
+   </children>
+</Pane>
