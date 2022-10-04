@@ -28,7 +28,7 @@ Special thanks to JavaFX v19: https://openjfx.io/<br>
 </details>
 
 「scripts」僅供參考，無法單獨編譯執行。<br>
-下載方式：https://drive.google.com/drive/folders/1fOTvLb6WUhz0L9M903ZIoWgQNh4V_yCO?usp=sharing<br>
+下載方式：[Google Drive](https://drive.google.com/drive/folders/1fOTvLb6WUhz0L9M903ZIoWgQNh4V_yCO?usp=sharing)<br>
 直接下載「jre.zip」，解壓縮後執行「server(windows).bat」及「client(windows).bat」。<br>
 其他平台可嘗試自行修改bat檔指令內容，但程式未經過其他平台測試，僅理論上可運行。<br>
 「project.zip」為完整Eclipse project資料夾。
